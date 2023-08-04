@@ -1,3 +1,20 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+# Ignore Terraform files
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Ignore Visual Studio Code settings
+.vscode/
+.idea/
+.terraform/
+.vs/
+
+# Ignore Docker build context
+.DS_Store
+docker-compose.override.yml
+DockerDebug.env
+DockerRelease.env

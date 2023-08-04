@@ -34,7 +34,7 @@ resource "kubernetes_deployment" "app_deployment" {
       spec {
         container {
           name  = "helloworld-app"
-          image = "talaharon23/helloworld-app:1.0"
+          image = "talaharon23/helloworld-app:1.1"
 
           port {
             container_port = 8080

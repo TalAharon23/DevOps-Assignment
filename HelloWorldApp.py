@@ -15,7 +15,7 @@ class ActiveMQConsumer(stomp.ConnectionListener):
     def __init__(self):
         self.conn = stomp.Connection()
         self.conn.set_listener('', self)
-        self.conn.connect('admin', 'password', wait=True)
+        self.conn.connect('admin', 'admin', wait=True)
         self.conn.subscribe(destination='/queue/app-queue', id=1, ack='auto')
 
     def on_error(self, message):
