@@ -91,7 +91,7 @@ User and password: admin
 
 3. Create a queue named "app-queue"
 
-### 6. Set Up ActiveMQ
+### 6. Access the Application
 
 1. Access Through Kubernetes: Once deployed, you can access your application through Kubernetes. Run the following command to get the URL:
 ```sh
