@@ -38,7 +38,7 @@ git clone <repository-url>
 cd HelloWorldApp
 ```
 
-### 2. Build and Push the Docker Image
+### 2. Dockerize the Application
 1. Build the Docker image:
 ```sh
 docker build -t helloworld-app .
