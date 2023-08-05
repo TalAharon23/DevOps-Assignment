@@ -1,4 +1,4 @@
-# HelloWorldApp with Kubernetes and ActiveMQ
+# Hello World App
 
 Welcome to HelloWorldApp! This project demonstrates how to containerize a simple "Hello World" application, deploy it to a Kubernetes cluster using Terraform, and integrate it with ActiveMQ for message queuing.
 
@@ -23,8 +23,8 @@ Welcome to HelloWorldApp! This project demonstrates how to containerize a simple
 
 Before you begin, make sure you have the following software installed:
 
-- Docker
-- Kubernetes (Minikube or Docker Desktop with Kubernetes enabled)
+- Docker (Docker Desktop)
+- Kubernetes (Minikube, kubectl and Kubernetes enabled)
 - Terraform
 - Git
 
