@@ -11,13 +11,12 @@ Welcome to HelloWorldApp! This project demonstrates how to containerize a simple
   - [3. Kubernetes Setup](#3-kubernetes-setup)
   - [4. Deploy with Terraform](#4-deploy-with-terraform)
   - [5. Set Up ActiveMQ](#5-set-up-activemq)
-  - [6. Integrate with ActiveMQ](#6-integrate-with-activemq)
-  - [7. Access the Application](#7-access-the-application)
+  - [6. Access the Application](#6-access-the-application)
 - [Cleanup](#cleanup)
-- [Contributions](#contributions)
-- [License](#license)
 - [Approach](#approach)
 - [Challenges and Solutions](#challenges-and-solutions)
+- [Contributions](#contributions)
+- [License](#license)
 
 ## Prerequisites
 
@@ -73,16 +72,15 @@ minikube start
 ```
 Minikube will create a virtual machine and set up a Kubernetes cluster inside it.
 
-2. Deploy the application using Terraform:
-```
+### 4. Deploy with Terraform
+Deploy the application using Terraform:
+```sh
 terraform init
 terraform plan
 terraform apply
 ```
 
-
-
-### 4. Set Up ActiveMQ
+### 5. Set Up ActiveMQ
 1. Install and Configure ActiveMQ:
 After download ActiveMQ, navigate to the activemq/bin directory and run:
 ```sh
@@ -93,23 +91,22 @@ User and password: admin
 
 3. Create a queue named "app-queue"
 
+### 6. Set Up ActiveMQ
 
-
-## Running the Application
 1. Access Through Kubernetes: Once deployed, you can access your application through Kubernetes. Run the following command to get the URL:
 ```sh
 minikube service helloworld-service
 ```
 
 This command will open your default web browser and navigate to the URL of your deployed application.
-
-2. Access the ActiveMQ Dashboard: To monitor and manage your ActiveMQ messages, you can access the ActiveMQ web UI. Use port-forwarding to access the ActiveMQ dashboard locally:
-
-```sh
-kubectl port-forward <activemq-pod-name> 8161:8161
-```
-
 Open your browser with the url provided to access the ActiveMQ web UI.
+
+## Cleanup
+To clean up and remove deployed resources, run:
+```sh
+terraform destroy
+minikube delete
+```
 
 ## Approach
 The approach taken for this project involves:
@@ -121,10 +118,16 @@ The approach taken for this project involves:
 3. Integration with ActiveMQ: ActiveMQ is set up and integrated with the application for message queuing, enhancing communication and data processing.
 
 ## Challenges and Solutions
-Throughout development, I've encountered and overcame various challenges:
+Throughout development, I've encountered and overcome various challenges:
 
 1. Java Version Compatibility: ActiveMQ integration required specific Java version compatibility. We ensured the correct Java version was configured for ActiveMQ.
 
 2. Networking and Connectivity: Establishing communication between the application, Kubernetes, and ActiveMQ involved configuring network settings and endpoints.
 
 3. Terraform Configuration: Proper parameterization and understanding of Kubernetes object definitions were crucial for configuring resources with Terraform.
+
+## Contributions
+Contributions are welcome! If you encounter issues or have suggestions for improvements, please submit a pull request.
+
+## License
+This project is licensed under the MIT License.
