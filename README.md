@@ -58,7 +58,7 @@ docker login
 docker push <dockerhub-username>/helloworld-app:1.0
 ```
 
-### 3. Deploy to Kubernetes
+### 3. Kubernetes Setup
 1. Setting Up a Kubernetes Cluster with Minikube
 Here's how you can set it up:
 
