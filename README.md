@@ -1,6 +1,6 @@
 # Hello World App
 
-Welcome to HelloWorldApp! This project demonstrates how to containerize a simple "Hello World" application, deploy it to a Kubernetes cluster using Terraform, and integrate it with ActiveMQ for message queuing.
+Welcome to Hello World App! This project demonstrates how to containerize a simple "Hello World" application, deploy it to a Kubernetes cluster using Terraform, and integrate it with ActiveMQ for message queuing.
 
 ## Table of Contents
 
