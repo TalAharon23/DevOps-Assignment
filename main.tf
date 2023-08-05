@@ -89,3 +89,59 @@ resource "kubernetes_ingress_v1" "app_ingress" {
   }
 }
 
+# resource "kubernetes_deployment" "activemq" {
+#   metadata {
+#     name      = "helloworld-activemq"
+#     namespace = kubernetes_namespace.app_namespace.metadata[0].name
+#   }
+
+#   spec {
+#     replicas = 1
+
+#     selector {
+#       match_labels = {
+#         app = "activemq"
+#       }
+#     }
+
+#     template {
+#       metadata {
+#         labels = {
+#           app = "activemq"
+#         }
+#       }
+
+#       spec {
+#         container {
+#           name  = "activemq"
+#           image = "rmohr/activemq:latest"
+
+#           port {
+#             container_port = 8161
+#           }
+#         }
+#       }
+#     }
+#   }
+# }
+
+# resource "kubernetes_config_map" "activemq-config" {
+#   metadata {
+#     name      = "activemq-config"
+#     namespace = kubernetes_namespace.app_namespace.metadata[0].name
+#   }
+
+#   data = {
+#     "activemq.xml" = <<-EOF
+#     <beans xmlns="http://www.springframework.org/schema/beans"
+#            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+#            xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+#         <bean id="jmsQueue" class="org.apache.activemq.command.ActiveMQQueue">
+#             <constructor-arg value="app-queue"/>
+#         </bean>
+
+#     </beans>
+#     EOF
+#   }
+# }
