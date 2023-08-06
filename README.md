@@ -124,7 +124,9 @@ Throughout development, I've encountered and overcome various challenges:
 
 2. Networking and Connectivity: Establishing communication between the application, Kubernetes, and ActiveMQ involved configuring network settings and endpoints.
 
-3. Terraform Configuration: Proper parameterization and understanding of Kubernetes object definitions were crucial for configuring resources with Terraform.
+3. Terraform Configuration: Proper parameterization and understanding of Kubernetes object definitions with Terraform.
+
+4. Learning ActiveMQ from scratch.
 
 ## Contributions
 Contributions are welcome! If you encounter issues or have suggestions for improvements, please submit a pull request.
